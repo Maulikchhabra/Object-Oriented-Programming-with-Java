@@ -1,0 +1,36 @@
+JDBC = java database conectivity
+
+Steps : Import the package (java.sql.*)
+        Load and register the driver (com.mysql.jdbc.Driver => for loading this driver download mysql-connector and for register => forName("com.mysql.jdbc.Driver"))
+		Establish the connection (Connection interface)
+		Create the statement (Statement of 3 types : statement, prepared statement, callable statement)
+		Execute the query
+		Process request
+		Close
+		
+Example :
+    import java.sql.*; //first step
+	
+	public class Example{
+	
+	    public static void main(String args[]){
+	       
+		   Class.forName("com.mysql.jdbc.Driver"); //second step
+		   
+		   Connection con = DriverManager.getConnection("URL","UserName","PassWord"); //third step
+		   
+		   Statement st = con.createStatement(); //fourth step
+		   
+		   ResultSet rs = st.executeQuery("select * from student"); //Fifth step
+		   
+		   while(rs.next()){
+		      System.out.println(rs.getInt(1) +" "+rs.getString(2)); //getInt(1) means taking int values from 1st column and getString(2) means taking string values from 2nd column
+		   } //sixth step
+		   
+           st.close();
+		   con.close(); //seventh step
+		   
+	   
+	}}
+	
+    		
