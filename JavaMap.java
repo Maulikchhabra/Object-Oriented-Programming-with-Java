@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Solution{
+class JavaMap{
 	public static void main(String []argh)
 	{
 		Scanner in = new Scanner(System.in);
@@ -14,22 +14,22 @@ class Solution{
 		{
 			String name=in.nextLine();
 			int phone=in.nextInt();
-      m.put(name,phone); //inserting values
+                        m.put(name,phone); //inserting values
 			in.nextLine();
 		}
         
         //System.out.println(m);
 		
-    while(in.hasNext())
+                while(in.hasNext())
 		{
-			String s=in.nextLine();
+		   String s=in.nextLine();
 
-            if(m.containsKey(s)){
-               System.out.println(s+"="+m.get(s)); //getting output
+                   if(m.containsKey(s)){
+                     System.out.println(s+"="+m.get(s)); //getting output
             
-            }else{
-                System.out.println("Not found");
-            }
+                   }else{
+                     System.out.println("Not found");
+                   }
 		}
 	}
 }
