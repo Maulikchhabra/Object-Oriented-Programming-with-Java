@@ -22,7 +22,7 @@ class Add{
   }
 }
 
-public class Solution {
+public class JavaVarArgs {
 
     public static void main(String[] args) {
        try{
